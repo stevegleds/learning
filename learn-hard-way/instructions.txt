@@ -1,0 +1,4 @@
+Powershell
+Copy the following and paste into powershell cmd line:
+
+cd "H:\data\_steve\google-drive\Google Drive\coding\python\hard-way"

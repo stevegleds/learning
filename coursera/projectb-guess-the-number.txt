@@ -1,0 +1,85 @@
+    # template for "Guess the number" mini-project
+# input will come from buttons and an input field
+# all output for the game will be printed in the console
+import simplegui
+import random
+
+# initialize global variables used in your code
+canvas_width = 300
+canvas_height = 300
+limit = 100
+guess = 0
+max_guesses = 7
+num_guesses = 0
+secret_number = random.randrange(0,limit+1) # This will produce numbers between 0 and limit
+
+# define event handlers for control panel
+    
+def game_100():
+    """ code to go here to set the game to 100 """
+    global limit, secret_number, max_guesses, num_guesses
+    limit = 100
+    max_guesses = 7
+    num_guesses = 0
+    secret_number = random.randrange(0,limit+1) # This will produce numbers between 0 and limit
+    print "we are playing a new", limit, "game"
+    print "The limit is:", limit
+    return
+def game_1000():
+    """ code to go here to set the game to 1000 """
+    global limit, secret_number, max_guesses, num_guesses
+    limit = 1000
+    max_guesses = 10
+    num_guesses = 0
+    secret_number = random.randrange(0,limit+1) # This will produce numbers between 0 and limit
+    print "We are playing a new", limit, "game."
+    print "The limit is:", limit
+    print ""
+    return
+def input_guess(guess):
+    """ code to go here to check the guess """
+    global num_guesses
+    guess = float(guess)
+    num_guesses += 1
+    if guess == secret_number:
+        print "Well Done! You got it right! The number was:", secret_number
+        print ""
+        if limit == 100:
+            game_100()
+        else: game_1000()
+    elif guess > secret_number:
+        print "You guessed", guess, ". That was guess number", num_guesses, "out of a maximum of", max_guesses, "."
+        print "The number is LOWER than your guess."
+        print ""
+    else: 
+        print "You guessed ", guess, ". That was guess number", num_guesses, "out of a maximum of", max_guesses, "."
+        print "The number is HIGHER than your guess."
+        print ""
+    if num_guesses < max_guesses: return
+    elif limit == 1000:
+        print "That was your last Guess. You were allowed up to ", limit, "guesses."
+        print "Please try a new game."
+        print "The secret number was", secret_number
+        print ""
+        game_1000()
+    else:
+        print "That was your last Guess. You were allowed up to ", limit, "guesses."
+        print "Please try a new game."
+        print "The secret number was", secret_number
+        print ""
+        game_100()
+    return
+    
+# create frame
+frame = simplegui.create_frame("Guess the Number", canvas_width, canvas_height)
+
+# register event handlers for control elements
+frame.add_button("Range 0 - 100", game_100, 150)
+frame.add_button("Range 0 - 1000", game_1000, 150)
+frame.add_input("Enter your guess!", input_guess, 150)
+
+# start frame
+game_100()
+frame.start()
+
+# always remember to check your completed program against the grading rubric
