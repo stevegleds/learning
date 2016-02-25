@@ -12,12 +12,12 @@ def dele():
 
 userinput = StringVar()
 mygui.title('Hello')
-mygui.geometry("450x400+1450+100")
+mygui.geometry("450x400+450+100")
 mysecondgui.title('Second Window')
-mysecondgui.geometry("450x500+1450+600")
+mysecondgui.geometry("450x500+900+60")
 mylabel1 = Label(mygui, text='RESULTS', fg='red', bg='white', font=30).pack()
-mybutton1 = Button(mygui, text='Enter', bg='blue', fg='white',font=20, command = hello ).place(x=200, y=200)
-mybutton2 = Button(mysecondgui, text='Delete', bg='red', fg='white',font=20, command = dele).place(x=300, y=400)
+mybutton1 = Button(mygui, text='Enter', bg='blue', fg='white',font=20, command=hello).place(x=200, y=200)
+mybutton2 = Button(mysecondgui, text='Delete', bg='red', fg='white',font=20, command=dele).place(x=300, y=400)
 text = Entry(textvariable=userinput).pack()
 
 mygui.mainloop()
