@@ -29,9 +29,9 @@ def quitprogram():
 
 userinput = StringVar()
 mygui.title('Hello')
-mygui.geometry("450x400+1450+100")
+mygui.geometry("450x400+150+100")
 mysecondgui.title('Second Window')
-mysecondgui.geometry("450x500+1450+600")
+mysecondgui.geometry("450x400+650+100")
 mylabel1 = Label(mygui, text='RESULTS', fg='red', bg='white', font=('arial', 24, 'italic')).pack()
 mybutton1 = Button(mygui, text='Enter', bg='blue', fg='white', font=('times', 24, 'bold'), command=hello, ).place(x=200, y=200)
 mybutton2 = Button(mysecondgui, text='Delete', bg='red', fg='white',font=20, command=dele).place(x=300, y=400)
