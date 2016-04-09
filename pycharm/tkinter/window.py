@@ -14,7 +14,7 @@ def dele():
 
 
 def newfile():
-    myLabel5 = Label(mygui, text = 'clicked new file', font=('roman', 24, 'italic')).pack()
+    myLabel5 = Label(mygui, text='clicked new file', font=('roman', 24, 'italic')).pack()
 
 
 def savemessagebox():
