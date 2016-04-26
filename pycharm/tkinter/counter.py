@@ -11,7 +11,6 @@ def counter_label(label):
     count()
 
 
-
 root = tk.Tk()
 root.title("Counter")
 label = tk.Label(root, fg="dark green")
