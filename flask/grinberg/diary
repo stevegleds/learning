@@ -1,6 +1,12 @@
+09 May 2016
+Finished the form with validation
+Created db using ginberg's script files.
+Next step: Database relationships from
+http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-iv-database
+
 07 May 2016
 Started on forms.
-Next step is 'receing form data' from http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-iii-web-forms
+Next step is 'receiving form data' from http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-iii-web-forms
 06 May 2016
 Working on desktop. Don't think I've installed the required apps yet other than flask
 Created templates.
