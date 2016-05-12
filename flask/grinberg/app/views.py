@@ -8,10 +8,10 @@ from .models import User
 @app.route('/')
 @app.route('/index')
 @app.route('/index.html')
-@login_required
+# @login_required removed because not going to use openid authentication
 def index():
     user = g.user
-    posts = [  # fake array of posts
+    posts = [
         {
             'author': {'nickname': 'John'},
             'body': 'Beautiful day in Portland!'
@@ -71,3 +71,19 @@ def after_login(resp):
 def before_request():
     g.user = current_user
 
+
+# create profile pages
+@app.route('/user/<nickname>')
+# @login_required switched off because don't have openid to test
+def user(nickname):
+    user = User.query.filter_by(nickname=nickname).first()
+    if user == None:
+        flash('User {0} not found.' .format(nickname))
+        return redirect(url_for('index'))
+    posts = [
+        {'author' : user, 'body' : 'Test post #1'},
+        {'author' : user, 'body' : 'Test post #2'}
+    ]
+    return render_template('user.html',
+                           user=user,
+                           posts=posts)
