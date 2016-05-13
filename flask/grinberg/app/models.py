@@ -1,4 +1,5 @@
 from app import db
+from hashlib import md5
 
 
 class User(db.Model):
@@ -27,6 +28,9 @@ class User(db.Model):
 
     def __repr__(self):  #we will use this method for debugging
         return '<User %r>' % (self.nickname)
+
+    def avatar(self, size):
+        return 'http://blog.miguelgrinberg.com/static/images/flask-mega-tutorial-part-vi-1.png'
 
 
 class Post(db.Model):

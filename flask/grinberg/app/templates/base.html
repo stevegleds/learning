@@ -11,8 +11,9 @@
 <body>
     <div>Microblog:
         <a href="/index">Home</a>
-        | <a href="/login">Login</a></div>
-        | <a href="{{ url_for('user', nickname = 'Susan') }}">Your Profile </a>"
+        | <a href="/login">Login</a>
+        | <a href="{{ url_for('user', nickname = 'Susan') }}">Your Profile </a>
+    </div>
     <hr>
     {% with messages = get_flashed_messages() %}
         {% if messages %}
