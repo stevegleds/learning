@@ -1,3 +1,11 @@
+13 May 2016
+Added avatars
+Amended db to allow more profile info including path to avatar_large / avatar_small
+Need to upload to gledhill.xyz so images can be found and continue with modifying profile from:
+ http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-vi-profile-page-and-avatars
+Db migrated successfully
+
+
 12 May 2016
 Removed authorisation as needed to get it working (not using openid so there's no point trying to fix it!)
 Need to add new data to database (not sure how to retai it
