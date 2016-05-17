@@ -1,3 +1,8 @@
+17 May 2016
+Carried on with avatars. Still complicated by the userid login code so not working correctly to allow editing
+Created image field that contains avatar images on gledhill.xyz :
+gledhill.xyz/sg/coding/learning/flask/images/first-summer-run-2015.jpg
+
 13 May 2016
 Added avatars
 Amended db to allow more profile info including path to avatar_large / avatar_small
