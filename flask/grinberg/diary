@@ -1,3 +1,7 @@
+20 May 2016
+Created followers / following relationships in db
+Created tests.py file for unit testing
+
 17 May 2016
 Carried on with avatars. Still complicated by the userid login code so not working correctly to allow editing
 Created image field that contains avatar images on gledhill.xyz :
