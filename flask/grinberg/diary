@@ -1,3 +1,9 @@
+25 May 2016
+Added some database queries (posts of followed/followers)
+Next step to add to front end
+Still on http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-viii-followers-contacts-and-friends
+
+
 20 May 2016
 Created followers / following relationships in db
 Created tests.py file for unit testing
