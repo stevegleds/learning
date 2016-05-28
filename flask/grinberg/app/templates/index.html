@@ -3,6 +3,7 @@
     <h1>Hi, {{ user.nickname }}!</h1>
     <h2>This is the live version</h2>
     <p>I have agreed this edit for final release</p>
+    <p>I wonder if this is OK?</p>
     {% for post in posts %}
     <div><p>{{  post.author.nickname }} says: <b>{{ post.body }}</b></p></div>
     {% endfor %}
